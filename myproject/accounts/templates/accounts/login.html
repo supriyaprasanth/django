@@ -1,0 +1,29 @@
+<html>
+    <head>
+        {% block head %}
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet"  href="{% static 'accounts/style.css' %}" type="text/css">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="container">
+            <fieldset>
+                <legend>
+                    <font color="darkblue"><b>Login here</b></font>
+                </legend>
+                Username: <br> <input type="text"> <br>
+                Password: <br> <input type="password"> <br> <br>
+                <button class="btn btn-success" type="button" name="button">Submit</button>
+            </fieldset>
+        </div>
+        <h1>{{ myName }}</h1> 
+        <ul>
+            {%for i in numb%}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </body>
+</html>
